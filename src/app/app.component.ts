@@ -12,7 +12,7 @@ export class AppComponent {
   nombre="";
   apellido="";
 
-  entradas: object[];
+  entradas: any[];
 
   constructor(){
     this.entradas=[

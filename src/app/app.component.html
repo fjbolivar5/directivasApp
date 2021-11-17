@@ -22,5 +22,5 @@
 <br/><br/>
 
 <ul>
-  <li *ngFor="let entrada of entradas">{{entrada.titulo}}</li>
+  <li *ngFor="let entrada of entradas; let i=index">{{i}} - {{entrada.titulo}}</li>
 </ul>
