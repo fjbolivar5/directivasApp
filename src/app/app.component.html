@@ -5,6 +5,8 @@
   <input type="text" name="nombre" [(ngModel)]="nombre">
   <br/>
   <input type="text" name="apellido" [(ngModel)]="apellido">
+  <br>
+  <input type="text" name="cargo" [(ngModel)]="cargo">
   <br/>
   <input type="submit" value="registrar" (click)="registrarUsuario()">
   <br/>
@@ -13,7 +15,8 @@
 
 <br/>
 
-<p *ngIf="registrado;else sinRegistrar">{{mensaje}} con el nombre de <b>{{nombre}} {{apellido}}</b></p>
+<p *ngIf="registrado;else sinRegistrar">{{mensaje}} Nombre <b>{{nombre}} {{apellido}}</b> Cargo 
+  <span [ngStyle]="{color:cargo=='director' ? 'red' : 'black'}">{{cargo}}</span></p>
 
 <ng-template #sinRegistrar>
   <p>Nadie registrado</p>
